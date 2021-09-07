@@ -1,0 +1,130 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<html>
+    <head>
+        <style>
+.btnContactSubmit {
+    width: 100%;
+    border-radius: 8px;
+    padding: 14px 41px;
+    color: #fff !important;
+    background-color: #000 !important;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.text-align{
+    margin-top: -9%;
+    margin-bottom: -9%;
+
+    padding: 10%;
+    margin-left: 30%;
+}
+.form-new{
+    margin-right: 22%;
+    margin-left: 20%;
+}
+.register-heading {
+    margin-left: 0;
+    margin-bottom: 10%;
+    color: hsl(0deg 0% 13%);
+    font-weight: 600;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.register-heading h1{
+    margin-left: 21%;
+    margin-bottom: 10%;
+    color: #e9ecef;
+   font-family: 'Poppins', sans-serif;
+}
+h3.register-heading {
+    font-family: 'Kaisei HarunoUmi', serif;
+}
+
+.register {
+    /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+    margin-top: 3%;
+    padding: 3%;
+    border-radius: 2.5rem;
+}
+textarea.form-control {
+    height: 100px;
+}
+.row.register-form {
+    padding-top: 43px;
+    padding-bottom: 39px;
+    padding-left: 20px;
+    padding-right: 18px;
+    border: 1px solid #6c757d;
+}
+.form-control {
+    border: 1px solid #929eaa !important;
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+{
+.form-new {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 767px)
+{
+.form-new {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+}
+
+</style>
+    </head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="Styles/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="Styles/bootstrap-4.1.0.min.js" type="text/javascript"></script>
+        <link href="Styles/bootstrap-4.1.0.min.css" rel="stylesheet" type="text/css"/>
+        <link href="Styles/MainStyle.css" rel="stylesheet" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Generate Pdf</title>
+    </head>
+    <body>
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Generate Pdf</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12 test_user">
+                                    <form action="{{ url }}" method="post">
+                                      {% csrf_token %}
+                                        <div class="form-group">
+                                            <textarea type="textarea" name="pdf_content" class="form-control" placeholder="pdf content *" value="" required=""></textarea>
+                                        </div>
+                                        <div class="form-group main_btn">
+                                            <input type="submit" name="LGform1" class="btnContactSubmit" value="Generate Pdf" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
